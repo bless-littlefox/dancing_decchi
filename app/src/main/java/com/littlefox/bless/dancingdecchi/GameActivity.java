@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 /**
  * Created by littl on 2018/01/20.
@@ -65,4 +66,7 @@ public class GameActivity extends Activity implements MediaPlayer.OnCompletionLi
     public void onCompletion(MediaPlayer arg0) {
     }
 
+    public int getTiming() {
+        return mp.getCurrentPosition();
+    }
 }
