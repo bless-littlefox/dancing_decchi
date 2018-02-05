@@ -37,14 +37,14 @@ public class Main extends GameActivity {
 
         imageView = (ImageView)findViewById(R.id.imageDecchi);
 
-//        if (Build.VERSION.SDK_INT >= 19) {
-//            Window window = getWindow();
-//            View view = window.getDecorView();
-//            view.setSystemUiVisibility(
-//                    View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
-//                            View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
-//                            View.SYSTEM_UI_FLAG_FULLSCREEN);
-//        }
+        if (Build.VERSION.SDK_INT >= 19) {
+            Window window = getWindow();
+            View view = window.getDecorView();
+            view.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
+                            View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
+                            View.SYSTEM_UI_FLAG_FULLSCREEN);
+        }
 //
 //        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
 //            soundPoolTap = new SoundPool(50, AudioManager.STREAM_MUSIC, 0);
@@ -179,7 +179,6 @@ public class Main extends GameActivity {
     protected void onPause() {
         super.onPause();
         //soundPoolTap.release();
-        soundPoolEnd.release();
         tHandler=null;
     }
 }
